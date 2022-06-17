@@ -1,3 +1,5 @@
 <template>
-  <h1>aobut page</h1>
+  <div>
+    <ContentDoc></ContentDoc>
+  </div>
 </template>
