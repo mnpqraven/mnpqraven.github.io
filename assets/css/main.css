@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*color modes*/
 :root {
   --color: #243746;
@@ -46,7 +50,7 @@ h1,h2 {
 /*remember to check the type of transition .e.g width/height transitions needs transition-all*/
 @layer components {
   .navBar {
-    @apply top-0 left-0 w-screen h-10 m-0 flex flex-row place-content-center bg-gray-900 text-white shadow-lg transition-all ease-in-out duration-700;
+    @apply top-0 left-0 w-screen h-10 m-0 flex justify-center bg-[color:var(--bg-secondary)] shadow-lg transition-all ease-in-out duration-700;
 
     &:hover {
       @apply bg-gray-600;
@@ -54,7 +58,7 @@ h1,h2 {
   }
 
   .navBarButton {
-    @apply m-2 text-center  bg-gray-700 text-red-600 transition duration-500;
+    @apply m-2 flex text-center rounded-xl bg-gray-700 text-red-600 transition duration-500;
     &:hover {
       @apply bg-purple-400;
     }

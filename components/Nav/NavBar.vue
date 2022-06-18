@@ -1,5 +1,5 @@
 <template>
-  <div class="navBar hover:h-16">
+  <div class="navBar">
     <!--TODO: add a close button-->
     <NuxtLink class="navBarButton" to="/">Home</NuxtLink>
     <NuxtLink class="navBarButton" to="/about">About</NuxtLink>
