@@ -2,8 +2,6 @@
 //vanilla api
 const { data: hello } = await useFetch("/api/hello")
 const { data: number } = await useAsyncData('counter', () => $fetch('/api/count'))
-
-const { data: dirlist } = await useFetch('/api/spice')
 </script>
 
 <template>

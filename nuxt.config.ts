@@ -13,5 +13,5 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxtjs/color-mode'
   ],
-  build: { },
+  build: { }
 })

@@ -20,6 +20,7 @@
   --bg-secondary: #071521;
   --border-color: #0d2538;
 }
+
 .sepia-mode {
   --color: #433422;
   --color-secondary: #504231;
@@ -35,43 +36,51 @@ body {
   color: var(--color);
   transition: background-color 0.3s;
 }
+
 a {
   color: var(--color-primary);
 }
-input, select {
+
+input,
+select {
   background-color: var(--bg-secondary);
   color: var(--color);
 }
-h1,h2 {
+
+h1,
+h2 {
   font-size: 2em;
   font-weight: bold;
 }
 
 /*remember to check the type of transition .e.g width/height transitions needs transition-all*/
 @layer components {
-  .navBar {
-    @apply top-0 left-0 w-screen h-10 m-0 flex justify-center bg-[color:var(--bg-secondary)] shadow-lg transition-all ease-in-out duration-700;
+  .navBar-top {
+    @apply fixed top-0 left-0 w-screen m-0 flex flex-wrap justify-center bg-[color:var(--bg-secondary)] shadow-lg transition-all ease-in-out duration-700;
 
     &:hover {
       @apply bg-gray-600;
     }
   }
+  .navBar-bottom {
+    @apply fixed bottom-0 right-0 m-0 flex items-center justify-center bg-[color:var(--bg-secondary)] shadow-lg
+  }
 
   .navBarButton {
-    @apply m-2 flex text-center rounded-xl bg-gray-700 text-red-600 transition duration-500;
+    @apply px-16 m-2 flex text-center rounded-full bg-gray-700 text-red-600 transition duration-500;
+
     &:hover {
       @apply bg-purple-400;
     }
   }
 
   .navInnerContent {
-    @apply flex flex-col items-center max-w-3xl m-auto break-words;
+    @apply mt-10 flex flex-col items-center max-w-3xl m-auto break-words;
   }
 
-  /*route transition*/
   .page-enter-active,
   .page-leave-active {
-    transition: opacity 0.4s;
+    transition: opacity 0.5s;
   }
 
   .page-enter,
