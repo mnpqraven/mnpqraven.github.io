@@ -34,12 +34,10 @@ console.log(`slug output: ${slug}`)
 // TODO: make this points to the latest post (aka highest_number.md).
 // NOTE: Needs a middleware
 const { data: blog } = await useAsyncData(`${route.params.group}-${route.params.slug}`, () => {
-    return queryContent(path).sort({publishedAt: 1}).findOne()
+    return queryContent(path).findOne()
 })
 // NOTE: next and previous Id for navigation
 const [prev, next] = await queryContent(`blog/${group}`)
-    .sort({ publishedAt: 1 })
-    .only('_path')
     .findSurround({_path: path})
     .then((result) => { return result })
 </script>
