@@ -8,10 +8,13 @@
   },
   "devDependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
-    "@nuxt/content-edge": "^2.0.1-27588551.fa45652",
     "@nuxtjs/color-mode": "^3.1.4",
     "@nuxtjs/tailwindcss": "^5.1.2",
     "autoprefixer": "^10.4.7",
     "nuxt": "^3.0.0-rc.4"
+  },
+  "dependencies": {
+    "n": "^8.2.0",
+    "nvm": "^0.0.4"
   }
 }
